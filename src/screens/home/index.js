@@ -2,7 +2,8 @@ import {View, Text, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 import Styles from './styles';
 import Images from '../../assets/icons';
-
+import TextInputBox from '../../components/TextInputBox';
+import ButtonComp from '../../components/ButtonComp';
 const index = () => {
   return (
     <SafeAreaView style={Styles.container}>
@@ -22,47 +23,25 @@ const index = () => {
 
       <View style={Styles.girisContainer}>
         <View>
-          <View style={{mangin: 30}}>
-            <View style={{marginBottom: 10}}>
-              <Text style={Styles.girisText}>Gmail</Text>
-            </View>
-            <View style={Styles.iconWrapper}>
-              <View style={Styles.yanyana2}>
-                <View>
-                  <Text style={Styles.girisText2}>ilaydasenocak@gmail.com</Text>
-                </View>
-                <View>
-                  <Image source={Images.check} style={Styles.icon} />
-                </View>
-              </View>
-            </View>
-          </View>
+          <TextInputBox
+            icon={Images.check}
+            placeholder="ilaydasenocak@gmail.com"
+            title="Gmail"
+            secureText={false}
+          />
 
-          <View style={{marginTop: 20}}>
-            <View>
-              <Text style={Styles.girisText}>Password</Text>
-            </View>
-            <View style={Styles.iconWrapper}>
-              <View style={Styles.yanyana2}>
-                <View>
-                  <Text style={Styles.text2}>........</Text>
-                </View>
-                <View>
-                  <Image source={Images.hide} style={Styles.icon} />
-                </View>
-              </View>
-            </View>
-          </View>
+          <TextInputBox
+            icon={Images.hide}
+            placeholder="........."
+            title="Gmail"
+            secureText={true}
+          />
 
           <View>
             <Text style={Styles.text3}>Forgot password?</Text>
           </View>
 
-          <View style={Styles.button}>
-            <View style={Styles.buttonContainer}>
-              <Text style={Styles.buttonText}>Sign In</Text>
-            </View>
-          </View>
+          <ButtonComp title="Sign In" />
         </View>
 
         <View style={Styles.ortala}>

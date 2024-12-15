@@ -2,6 +2,7 @@ import {View, Text, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 import Styles from './style';
 import Images from '../../assets/icons';
+import SignInUp from '../../components/SignInUp';
 
 const index = () => {
   return (
@@ -19,12 +20,8 @@ const index = () => {
           </View>
 
           <View>
-            <View style={Styles.button1}>
-              <Text style={Styles.buttonText1}>SIGN IN</Text>
-            </View>
-            <View style={Styles.button2}>
-              <Text style={Styles.buttonText2}>SIGN UP</Text>
-            </View>
+            <SignInUp text="Sign In" textColor="white" />
+            <SignInUp text="Sign Up" textColor={'black'} color={'white'} />
           </View>
           <View style={{marginTop: 80}}>
             <Text style={{fontSize: 20, color: 'white'}}>
